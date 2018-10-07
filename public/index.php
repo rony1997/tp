@@ -13,3 +13,22 @@ class main{
         system::printPage($table);
     }
 }
+class csv
+{
+    static public function getRecords($filename)
+    {
+        $file =fopen($filename,'r');
+        $fields = array();
+        $count = 0;
+        while(! feof($file))
+        {
+            $record = fgetcsv($file);
+            if ($count == 0) {
+                $fields = $record;
+            }
+            else
+            {
+                $records[] = recordFactory::create($fields, $record);
+            }
+            $count++;
+        }
