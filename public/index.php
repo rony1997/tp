@@ -57,3 +57,9 @@ class recordFactory{
         $record =new record ($fieldNames,$value);
         return $record;
     }
+}
+class html{
+    public static function createTable($array)
+    {
+        echo "<html lang=\"en\">
+<head>
