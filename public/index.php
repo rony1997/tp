@@ -51,3 +51,9 @@ class record
         $name = '<th>' . $name . '</th>';
         $value = '<td>' . $value . '</td>';
     }
+}
+class recordFactory{
+    public static function create (array $fieldNames=null , array $value=null){
+        $record =new record ($fieldNames,$value);
+        return $record;
+    }
