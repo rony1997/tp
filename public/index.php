@@ -91,3 +91,9 @@ class html{
         return $html;
     }
 }
+        class system {
+    public static function printPage($page){
+        echo $page;
+    }
+}
+
