@@ -32,3 +32,7 @@ class csv
             }
             $count++;
         }
+        fclose($file);
+        return $records;
+    }
+}
